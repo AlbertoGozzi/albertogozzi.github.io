@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.albertogozzi.twa",
+        "sha256_cert_fingerprints": ["FB:80:F4:F0:59:F7:A6:AA:82:DE:8A:74:5B:FE:14:9E:F4:43:A8:C7:A7:70:67:23:FA:E6:53:BF:57:BE:8F:B6"]
+      }
+    }]
