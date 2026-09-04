@@ -30,14 +30,18 @@ Autoclicker con interfaccia grafica per Windows, scritto in Python.
 
 ## Creare un eseguibile .exe (opzionale)
 
-Se preferisci un file `.exe` da avviare con doppio click, senza dover installare Python ogni volta:
+Se preferisci un file `.exe` da avviare con doppio click, senza dover installare Python ogni volta, dopo aver installato Python fai doppio click su `build_exe.bat`: installa PyInstaller e crea l'eseguibile automaticamente.
+
+In alternativa, da riga di comando:
 
 ```
 pip install pyinstaller
 pyinstaller --onefile --noconsole autoclicker.py
 ```
 
-L'eseguibile verrà creato in `dist/autoclicker.exe`.
+In entrambi i casi l'eseguibile viene creato in `dist\autoclicker.exe`.
+
+Nota: l'eseguibile va generato direttamente su Windows (PyInstaller non fa cross-compiling da altri sistemi operativi), quindi non è possibile fornirlo già pronto in questo repository.
 
 ## Nota
 
