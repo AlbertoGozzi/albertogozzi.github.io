@@ -12,36 +12,25 @@ Autoclicker con interfaccia grafica per Windows, scritto in Python.
 - Hotkey globali: **F6** per avviare/fermare, **F9** per uscire (funzionano anche se la finestra non è in primo piano)
 - Le impostazioni vengono salvate automaticamente in `autoclicker_config.json`
 
-## Come eseguirlo su Windows
+## Come ottenere autoclicker.exe (anche se non hai Python)
 
-1. Installa Python 3 da [python.org](https://www.python.org/downloads/) (durante l'installazione spunta "Add python.exe to PATH").
-2. Apri il Prompt dei comandi (cmd) nella cartella `autoclicker`.
-3. Installa la dipendenza:
+Non serve installare nulla a mano: scarica la cartella `autoclicker` sul tuo PC e fai doppio click su **`build_exe.bat`**.
 
-   ```
-   pip install -r requirements.txt
-   ```
+- Se non hai Python, lo script prova a installarlo da solo tramite `winget` (il gestore pacchetti già integrato in Windows 10/11) senza bisogno del browser. Al termine ti chiederà di richiudere la finestra e rilanciare `build_exe.bat` una seconda volta (serve per aggiornare il PATH).
+- Se hai già Python, o dopo l'installazione automatica, lo script installa le dipendenze e genera `dist\autoclicker.exe`, poi apre la cartella `dist` in automatico.
 
-4. Avvia il programma:
+Se il tuo Windows non ha `winget` (versioni molto vecchie), lo script te lo segnala e ti indica di installare Python dal Microsoft Store (cerca "Python 3.12") prima di rilanciare `build_exe.bat`.
 
-   ```
-   python autoclicker.py
-   ```
+Nota: l'eseguibile va generato direttamente sul tuo PC Windows — io lavoro da un ambiente Linux e PyInstaller non permette di creare `.exe` da un altro sistema operativo, quindi non posso fornirtelo già pronto in questo repository.
 
-## Creare un eseguibile .exe (opzionale)
+## Eseguirlo senza creare l'exe (avanzato)
 
-Se preferisci un file `.exe` da avviare con doppio click, senza dover installare Python ogni volta, dopo aver installato Python fai doppio click su `build_exe.bat`: installa PyInstaller e crea l'eseguibile automaticamente.
-
-In alternativa, da riga di comando:
+Se preferisci lanciarlo direttamente con Python, dopo averlo installato:
 
 ```
-pip install pyinstaller
-pyinstaller --onefile --noconsole autoclicker.py
+pip install -r requirements.txt
+python autoclicker.py
 ```
-
-In entrambi i casi l'eseguibile viene creato in `dist\autoclicker.exe`.
-
-Nota: l'eseguibile va generato direttamente su Windows (PyInstaller non fa cross-compiling da altri sistemi operativi), quindi non è possibile fornirlo già pronto in questo repository.
 
 ## Nota
 
