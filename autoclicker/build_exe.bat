@@ -27,11 +27,11 @@ exit /b 1
 
 :haspython
 echo Python trovato. Installazione dipendenze...
-pip install -r requirements.txt pyinstaller
+python -m pip install -r requirements.txt pyinstaller
 if errorlevel 1 goto error
 
 echo Creazione dell'eseguibile...
-pyinstaller --onefile --noconsole --name autoclicker autoclicker.py
+python -m PyInstaller --onefile --noconsole --name autoclicker autoclicker.py
 if errorlevel 1 goto error
 
 echo.
